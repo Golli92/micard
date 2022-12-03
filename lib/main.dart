@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.grey[800],
         body: SafeArea(
           child: Column(
-
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
             CircleAvatar(
                 radius: 50.0,
@@ -40,58 +40,53 @@ class MyApp extends StatelessWidget {
                 ),
 
               ),
-            Container(
-              padding: EdgeInsets.all(15.0),
-              color: Colors.grey.shade600,
-              margin: EdgeInsets.symmetric(
-                  vertical: 15.0,
-                  horizontal: 30.0,
+              SizedBox(
+                height: 25.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
               ),
-              child: Row(
-                children: <Widget> [
-                  Icon(
+              Card(
+                margin: EdgeInsets.symmetric(
+                    vertical: 15.0,
+                    horizontal: 30.0),
+                color: Colors.grey.shade600,
+                child: ListTile(
+                  leading: Icon(
                     Icons.phone,
                     color: Colors.black,
-                    size: 50.0,
+                    size: 40.0,
                   ),
-                  SizedBox(
-                    width: 15.0,
-                  ),
-                  Text('+354 8498858',
-                   style: TextStyle(
-                     color: Colors.black,
-                     fontFamily: 'Source Sans Pro',
-                     fontSize: 20.0,
-                   ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-                padding: EdgeInsets.all(15.0),
-                color: Colors.grey.shade600,
-                margin: EdgeInsets.symmetric(
-                  vertical: 15.0,
-                  horizontal: 30.0,
-                ),
-                child: Row(
-                  children: <Widget> [
-                    Icon(
-                      Icons.email,
+                  title: Text(
+                    '+354 8498858',
+                    style: TextStyle(
                       color: Colors.black,
-                      size: 50.0,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 20.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                    vertical: 15.0,
+                    horizontal: 30.0),
+                color: Colors.grey.shade600,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black,
+                    size: 40.0,
+                  ),
+                  title: Text(
+                    'Ingolfurha@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    Text('Ingolfurha@gmail.com',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
